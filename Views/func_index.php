@@ -5,7 +5,7 @@
  * Date: 23/03/18
  * Time: 08:07
  */
-include('Navbar.php');
+include('../Include/Navbar.php');
 ?>
 <title>Funcionários</title>
     <!--<!-- Aqui entra o conteúdo da página-->
@@ -71,6 +71,6 @@ include('Navbar.php');
 
 <?php
 
-include('footer.php');
+include('../Include/footer.php');
 
 ?>

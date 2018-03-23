@@ -5,5 +5,5 @@
  * Date: 23/03/18
  * Time: 07:29
  */
-include('Navbar.php');
-//include('footer.php');
+include('../Include/Navbar.php');
+include('../Include/footer.php');
