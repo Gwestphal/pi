@@ -7,7 +7,7 @@
  */
 include('../Include/Navbar.php');
 ?>
-<title>Funcionários</title>
+    <title>Funcionários</title>
     <!--<!-- Aqui entra o conteúdo da página-->
     <div class="container">
         <div class="row">
@@ -22,7 +22,7 @@ include('../Include/Navbar.php');
                     <div>
                         <h4 class="grey-text" align="center">Quadro de Funcionários</h4>
                     </div>
-                    <table class="striped bordered">
+                    <table class="striped bordered highlight responsive-table">
                         <thead>
                         <tr>
                             <th>Ação</th>
@@ -42,6 +42,18 @@ include('../Include/Navbar.php');
                             </td>
                             <td>xxxx</td>
                             <td>xxxxx xxxxx</td>
+                            <td>(xx) x xxxx-xxxx</td>
+                            <td>(xx) x xxxx-xxxx</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a class="waves-effect waves-light" href="#"><i
+                                            class="material-icons left">mode_edit</i></a>
+                                <a href="#"><i
+                                            class="material-icons left red-text">delete</i></a>
+                            </td>
+                            <td>xxxx</td>
+                            <td>xxxxx xx xxxx</td>
                             <td>(xx) x xxxx-xxxx</td>
                             <td>(xx) x xxxx-xxxx</td>
                         </tr>
