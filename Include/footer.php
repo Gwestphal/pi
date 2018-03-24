@@ -9,11 +9,7 @@
 <style>
 
     #navfooter {
-        position: relative;
-        margin-top: 450px; /* Para fixar o footer no fim da página */
-        padding-bottom: 50px; /* Para fixar o footer no fim da página */
-        width: 1540px; /* Para fixar a largura do footer ao final da página aos lados */
-        height: 280px;
+
     }
 </style>
 

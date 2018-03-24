@@ -24,6 +24,10 @@
 
         }
 
+        .fluid-container{
+            margin: 5em auto;  /* em é mais que 1px e menor que 2px*/
+            padding: 0 10em;
+        }
     </style>
 </head>
 <body>
@@ -40,49 +44,6 @@
         </ul>
     </div>
 </nav>
-
-<!--<div class="container">-->
-<!--    <div class="row">-->
-<!--        <h4>EAE MEN</h4>-->
-<!--    </div>-->
-<!--</div>-->
-
-<!--<!--Rodapé -->
-<!--<footer class="page-footer blue-grey" id="navfooter">-->
-<!--    <div class="container">-->
-<!--        <div class="row">-->
-<!--            <div class="col l4 s12">-->
-<!--                <h5 class="white-text">Mais informações</h5>-->
-<!--                <p class="grey-text text-lighten-4">Somos uma empresa que fundou em 2018 no intuito de alegrar sua-->
-<!--                    festa!</p>-->
-<!--            </div>-->
-<!---->
-<!--            <div class="col l4 s12">-->
-<!--                <h5 class="white-text">Siga-nos nas redes sociais</h5>-->
-<!--                <p class="grey-text text-lighten-4">@suaFESTAaqui</p>-->
-<!--                <p class="grey-text text-lighten-4">Facebook/suaFESTAaqui</p>-->
-<!--            </div>-->
-<!---->
-<!--            <div class="col l4 s12">-->
-<!--                <h5 class="white-text">MENU</h5>-->
-<!--                <ul>-->
-<!--                    <li><a class="grey-text text-lighten-3" href="#">HOME</a></li>-->
-<!--                    <li><a class="grey-text text-lighten-3" href="#">Orçamento</a></li>-->
-<!--                    <li><a class="grey-text text-lighten-3" href="#">Cliente</a></li>-->
-<!--                    <li><a class="grey-text text-lighten-3" href="#">Trabalhe conosco</a></li>-->
-<!--                </ul>-->
-<!---->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--    <div class="footer-copyright">-->
-<!--        <div class="container">-->
-<!--            © 2018 - Todos os direito reservados-->
-<!--            <a class="grey-text text-lighten-4 right" href="#!">Saiba Mais</a>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</footer>-->
-<!---->
 
 <!--Jquery-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
