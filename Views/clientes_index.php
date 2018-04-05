@@ -7,7 +7,7 @@
  */
 include('../Include/Navbar.php');
 ?>
-    <title>Funcionários</title>
+    <title>Clientes</title>
     <!--<!-- Aqui entra o conteúdo da página-->
 
     <div class="fluid-container fluid-height">
@@ -16,8 +16,9 @@ include('../Include/Navbar.php');
                 <div class="card">
                     <div class="card-content">
                         <div>
-                            <h4 class="grey-text" align="center">Quadro de Funcionários</h4>
+                            <h4 class="grey-text" align="center">Quadro de Clientes</h4>
                         </div>
+                        <!-- Aqui entra um foreach-->
                         <table class="striped bordered responsive-table">
                             <thead>
                             <tr>
@@ -32,9 +33,9 @@ include('../Include/Navbar.php');
                             <tr>
                                 <td>
                                     <a class="waves-effect waves-light" href="#"><i
-                                            class="material-icons left">mode_edit</i></a>
+                                                class="material-icons left">mode_edit</i></a>
                                     <a href="#"><i
-                                            class="material-icons left red-text">delete</i></a>
+                                                class="material-icons left red-text">delete</i></a>
                                 </td>
                                 <td>xxxx</td>
                                 <td>xxxxx xxxxx</td>
@@ -44,9 +45,9 @@ include('../Include/Navbar.php');
                             <tr>
                                 <td>
                                     <a class="waves-effect waves-light" href="#"><i
-                                            class="material-icons left">mode_edit</i></a>
+                                                class="material-icons left">mode_edit</i></a>
                                     <a href="#"><i
-                                            class="material-icons left red-text">delete</i></a>
+                                                class="material-icons left red-text">delete</i></a>
                                 </td>
                                 <td>xxxx</td>
                                 <td>xxxxx xx xxxx</td>
@@ -56,9 +57,9 @@ include('../Include/Navbar.php');
                             <tr>
                                 <td>
                                     <a class="waves-effect waves-light" href="#"><i
-                                            class="material-icons left">mode_edit</i></a>
+                                                class="material-icons left">mode_edit</i></a>
                                     <a href="#"><i
-                                            class="material-icons left red-text">delete</i></a>
+                                                class="material-icons left red-text">delete</i></a>
                                 </td>
                                 <td>xxxx</td>
                                 <td>xxxxx xx xxxx</td>
@@ -71,7 +72,7 @@ include('../Include/Navbar.php');
                     <div class="right-align">
                         <a class="btn-floating btn-large waves-effect waves-light"
                            href="#"><i
-                                class="material-icons">add</i></a>
+                                    class="material-icons">add</i></a>
                     </div>
                 </div>
             </div>
@@ -79,7 +80,7 @@ include('../Include/Navbar.php');
     </div>
 
 <?php
-
+// depois resolver o bug deste include
 include('../Include/footer.php');
 
 ?>
