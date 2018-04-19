@@ -49,7 +49,7 @@
     </div>
 </footer>
 <!--Materialize JS-->
-<script src="js/materialize.js"></script>
+<script src="../js/materialize.js"></script>
 <script>
     $(document).ready(function () {
         $("select").material_select();

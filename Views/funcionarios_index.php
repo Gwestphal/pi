@@ -70,9 +70,9 @@ include('../Include/Navbar.php');
                         </table>
                     </div>
                     <div class="right-align">
-                        <a class="btn-floating btn-large waves-effect waves-light"
-                           href="#"><i
-                                    class="material-icons">add</i></a>
+                        <a class="btn-floating btn-large waves-effect waves-light" href="funcionarios_form.php">
+                            <i class="material-icons">add</i>
+                        </a>
                     </div>
                 </div>
             </div>

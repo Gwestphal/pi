@@ -24,8 +24,8 @@
 
         }
 
-        .fluid-container{
-            margin: 5em auto;  /* em é mais que 1px e menor que 2px*/
+        .fluid-container {
+            margin: 5em auto; /* em é mais que 1px e menor que 2px*/
             padding: 0 10em;
         }
     </style>
@@ -35,12 +35,12 @@
 <!--Navegação-->
 <nav class="blue-grey z-depth-4" id="navnavbar">
     <div class="BarraNav">
-        <a href="#"><img src="../Imagens/logo.PNG" width="136" alt="100"></a>
+        <a href="../TipoDeFesta.html"><img src="../Imagens/logo.PNG" width="136" alt="100"></a>
         <ul id="mobile" class="right hide-on-med-and-down">
             <li><a href="#">Orçamento</a></li>
-            <li><a href="#">Cliente</a></li>
-            <li><a href="#">Trabalhe conosco</a></li>
-            <li><a href="#"><i class="material-icons right">photo</i></a></li>
+            <li><a href="../Views/clientes_form.php">Cliente</a></li>
+            <li><a href="../Views/choice.php">Trabalhe conosco</a></li>
+            <!-- <li><a href="#"><i class="material-icons right">photo</i></a></li> -->
         </ul>
     </div>
 </nav>
