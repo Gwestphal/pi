@@ -12,8 +12,9 @@ include('../Include/Navbar.php');
 <!--<!-- Aqui entra o conteúdo da página-->
 <div class="container">
 
-    <div class="col s2 m1">
-        <div class="row">
+    <div class="row">
+
+        <div class="col s6 m6 l6">
             <h3 class="header">Novo Cadastro</h3>
             <div class="card horizontal card-choice">
                 <div class="card-image">
@@ -31,8 +32,8 @@ include('../Include/Navbar.php');
             </div>
         </div>
 
-        <h3 class="header">Consultar</h3>
-        <div class="row">
+        <div class="col s6 m6 l6">
+            <h3 class="header">Consultar</h3>
             <div class="card horizontal card-choice">
                 <div class="card-image">
                     <img src="https://lorempixel.com/100/190/nature/6">
@@ -48,9 +49,9 @@ include('../Include/Navbar.php');
             </div>
         </div>
     </div>
-
-
 </div>
+
+
 
 <?php
 // depois resolver o bug deste include
