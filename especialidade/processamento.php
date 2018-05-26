@@ -3,16 +3,16 @@ include_once 'Especialidade.php';
 
 $especialidade = new Especialidade();
 
-switch ($_GET['acao']){
+switch ($_GET['acao']) {
     case 'salvar':
-        if(!empty($_POST['idespecialidade'])){
+        if (!empty($_POST['id_especialidade'])) {
             $especialidade->alterar($_POST);
-        } else{
+        } else {
             $especialidade->inserir($_POST);
         }
         break;
     case 'excluir':
-        $especialidade->excluir($_GET['idespecialidade']);
+        $especialidade->excluir($_GET['id_especialidade']);
         break;
 }
 

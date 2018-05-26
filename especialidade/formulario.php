@@ -3,8 +3,8 @@ include_once 'Especialidade.php';
 
 $especialidade = new Especialidade();
 
-if(!empty($_GET['idespecialidade'])){
-    $especialidade->carregarPorId($_GET['idespecialidade']);
+if(!empty($_GET['id_especialidade'])){
+    $especialidade->carregarPorId($_GET['id_especialidade']);
 }
 
 include_once '../cabecalho.php';
@@ -17,7 +17,7 @@ include_once '../cabecalho.php';
 ?>
 
     <form class="form-horizontal" action="processamento.php?acao=salvar" method="post">
-        <input type="hidden" name="idespecialidade" value="<?php echo $especialidade->getidespecialidade(); ?>">
+        <input type="hidden" name="id_especialidade" value="<?php echo $especialidade->getidespecialidade(); ?>">
 
         <div class="form-group">
             <label for="nome" class="col-sm-2 control-label">Nome</label>

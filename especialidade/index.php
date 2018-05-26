@@ -20,10 +20,10 @@ include_once '../cabecalho.php';
         <?php foreach ($arEspecialidade as $especialidade){
             echo "
             <tr>
-                <td style='width: 151px'><a href='processamento.php?acao=excluir&idespecialidade={$especialidade['idespecialidade']}' class='btn btn-danger'>Excluir</a>
-                    <a href='formulario.php?idespecialidade={$especialidade['idespecialidade']}' class='btn btn-warning'>Alterar</a>
+                <td style='width: 151px'><a href='processamento.php?acao=excluir&id_especialidade={$especialidade['id_especialidade']}' class='btn btn-danger'>Excluir</a>
+                    <a href='formulario.php?id_especialidade={$especialidade['id_especialidade']}' class='btn btn-warning'>Alterar</a>
                 </td>
-                <td>{$especialidade['idespecialidade']}</td>
+                <td>{$especialidade['id_especialidade']}</td>
                 <td>{$especialidade['nome']}</td>
             </tr>
         ";
