@@ -6,9 +6,9 @@ $arEspecialidade = $especialidade->recuperarDados();
 
 include_once '../cabecalho.php';
 ?>
-    <h1 class="text-center">Cursos</h1>
+    <h1 class="text-center">Especialidades</h1>
 
-    <a class= "btn btn-info" href="formulario.php">Nova Especialidade</a>
+    <a class="btn btn-info" href="formulario.php">Nova Especialidade</a>
 
     <table class="table table-bordered table-hover table-striped table-condensed">
         <tr>
@@ -17,7 +17,7 @@ include_once '../cabecalho.php';
             <td>Nome</td>
         </tr>
 
-        <?php foreach ($arEspecialidade as $especialidade){
+        <?php foreach ($arEspecialidade as $especialidade) {
             echo "
             <tr>
                 <td style='width: 151px'><a href='processamento.php?acao=excluir&id_especialidade={$especialidade['id_especialidade']}' class='btn btn-danger'>Excluir</a>

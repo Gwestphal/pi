@@ -2,9 +2,10 @@
 
 include_once '../Conexao.php';
 
-class Cliente{
+class Cliente
+{
 
-    protected $idCliente;
+    protected $id_cliente;
     protected $nome;
     protected $cpf;
     protected $rg;
@@ -14,22 +15,22 @@ class Cliente{
     protected $celular;
     protected $endereco;
     protected $cep;
-
+    protected $uf;
 
     /**
      * @return mixed
      */
     public function getIdCliente()
     {
-        return $this->idCliente;
+        return $this->id_cliente;
     }
 
     /**
-     * @param mixed $idCliente
+     * @param mixed $id_cliente
      */
-    public function setIdCliente($idCliente)
+    public function setIdCliente($id_cliente)
     {
-        $this->idCliente = $idCliente;
+        $this->id_cliente = $id_cliente;
     }
 
     /**
@@ -191,15 +192,18 @@ class Cliente{
     {
         $this->uf = $uf;
     }
-    protected $uf;
 
-    public function recuperarDados(){
+
+    public function recuperarDados()
+    {
         $conexao = new Conexao();
+
         $sql = "select * from cliente";
         return $conexao->recuperarDados($sql);
     }
 
-    public function inserir($dados){
+    public function inserir($dados)
+    {
 
         $nome = $dados['nome'];
         $cpf = $dados['cpf'];
@@ -215,30 +219,32 @@ class Cliente{
         $conexao = new Conexao();
 
         $sql = "insert into cliente (nome, cpf, rg, sexo, email, telefone, celular, endereco, cep, uf) values
-                ('$nome','$cpf','$rg','$sexo','$email','$telefone','$celular','$endereco','$cep','$uf');";
+                ('$nome', '$cpf', '$rg', '$sexo', '$email', '$telefone', '$celular', '$endereco', '$cep', '$uf');";
 
         /*echo $sql; die; MOSTRAR O SQL*/
         return $conexao->executar($sql);
     }
 
-    public function excluir($idCliente){
+    public function excluir($id_cliente)
+    {
 
         $conexao = new Conexao();
 
-        $sql = "delete from cliente where idCliente = $idCliente;";
+        $sql = "delete from cliente where id_cliente = $id_cliente;";
 
         /*echo $sql; die; MOSTRAR O SQL*/
         return $conexao->executar($sql);
     }
 
 
-    public function carregarPorId($idCliente){
+    public function carregarPorId($id_cliente)
+    {
         $conexao = new Conexao();
 
-        $sql = "select * from cliente where idCliente = $idCliente";
+        $sql = "select * from cliente where id_cliente = $id_cliente";
         $dados = $conexao->recuperarDados($sql);
 
-        $this->idCliente = $dados[0]['idCliente'];
+        $this->id_cliente = $dados[0]['id_cliente'];
         $this->nome = $dados[0]['nome'];
         $this->cpf = $dados[0]['cpf'];
         $this->rg = $dados[0]['rg'];
@@ -250,9 +256,11 @@ class Cliente{
         $this->cep = $dados[0]['cep'];
         $this->uf = $dados[0]['uf'];
     }
-    public function alterar($dados){
 
-        $idCliente = $dados['idCliente'];
+    public function alterar($dados)
+    {
+
+        $id_cliente = $dados['id_cliente'];
         $nome = $dados['nome'];
         $cpf = $dados['cpf'];
         $rg = $dados['rg'];
@@ -267,7 +275,7 @@ class Cliente{
         $conexao = new Conexao();
 
         $sql = "update cliente set nome='$nome', cpf='$cpf', rg='$rg', sexo='$sexo', email='$email', telefone='$telefone',
-        celular='$celular', endereco='$endereco', cep='$cep', uf='$uf'  where idCliente = $idCliente";
+        celular='$celular', endereco='$endereco', cep='$cep', uf='$uf'  where id_cliente = '$id_cliente'";
 
         /*echo $sql; die; MOSTRAR O SQL*/
         return $conexao->executar($sql);

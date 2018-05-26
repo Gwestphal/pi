@@ -2,7 +2,8 @@
 
 include_once '../Conexao.php';
 
-class Musica{
+class Musica
+{
 
     protected $idmusica;
     protected $artista;
@@ -57,13 +58,15 @@ class Musica{
     }
 
 
-    public function recuperarDados(){
+    public function recuperarDados()
+    {
         $conexao = new Conexao();
         $sql = "select * from musica";
         return $conexao->recuperarDados($sql);
     }
 
-    public function inserir($dados){
+    public function inserir($dados)
+    {
 
         $artista = $dados['artista'];
         $genero = $dados['genero'];
@@ -77,35 +80,39 @@ class Musica{
         return $conexao->executar($sql);
     }
 
-    public function excluir($idmusica){
+    public function excluir($idmusica)
+    {
 
         $conexao = new Conexao();
 
-        $sql = "delete from musica where idmusica = $idmusica;";
+        $sql = "delete from musica where id_musica = '$idmusica'";
 
         /*echo $sql; die; MOSTRAR O SQL*/
         return $conexao->executar($sql);
     }
 
-    public function carregarPorId($idmusica){
+    public function carregarPorId($idmusica)
+    {
         $conexao = new Conexao();
 
-        $sql = "select * from musica where idmusica = $idmusica";
+        $sql = "select * from musica where id_musica = '$idmusica'";
         $dados = $conexao->recuperarDados($sql);
 
-        $this->idmusica = $dados[0]['idmusica'];
+        $this->idmusica = $dados[0]['id_musica'];
         $this->artista = $dados[0]['artista'];
         $this->genero = $dados[0]['genero'];
     }
-    public function alterar($dados){
 
-        $idmusica = $dados['idmusica'];
+    public function alterar($dados)
+    {
+
+        $idmusica = $dados['id_musica'];
         $artista = $dados['artista'];
         $genero = $dados['genero'];
 
         $conexao = new Conexao();
 
-        $sql = "update musica set artista ='$artista', genero='$genero' where idmusica = $idmusica";
+        $sql = "update musica set artista ='$artista', genero='$genero' where id_musica = '$idmusica'";
 
         /*echo $sql; die; MOSTRAR O SQL*/
         return $conexao->executar($sql);

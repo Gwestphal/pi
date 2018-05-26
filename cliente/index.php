@@ -29,8 +29,8 @@ include_once '../cabecalho.php';
         <?php foreach ($arClientes as $cliente) {
             echo "
             <tr>
-                <td style='width: 151px'><a href='processamento.php?acao=excluir&idCliente={$cliente['idCliente']}' class='btn btn-danger'>Excluir</a>
-                    <a href='formulario.php?idCliente={$cliente['idCliente']}' class='btn btn-warning'>Alterar</a>
+                <td style='width: 151px'><a href='processamento.php?acao=excluir&id_cliente={$cliente['id_cliente']}' class='btn btn-danger'>Excluir</a>
+                    <a href='formulario.php?id_cliente={$cliente['id_cliente']}' class='btn btn-warning'>Alterar</a>
                 </td>
                 <td>{$cliente['nome']}</td>
                 <td>{$cliente['cpf']}</td>

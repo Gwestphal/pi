@@ -4,8 +4,8 @@ include_once 'Cliente.php';
 $cliente = new cliente();
 $arcliente = $cliente->recuperarDados();
 
-if(!empty($_GET['idCliente'])){
-    $cliente->carregarPorId($_GET['idCliente']);
+if(!empty($_GET['id_cliente'])){
+    $cliente->carregarPorId($_GET['id_cliente']);
 }
 
 include_once '../cabecalho.php';
@@ -20,7 +20,7 @@ include_once '../cabecalho.php';
 
 <div class="container">
     <form class="form-horizontal" action="processamento.php?acao=salvar" method="post">
-        <input type="hidden" name="idCliente" value="<?php echo $cliente->getIdCliente(); ?>">
+        <input type="hidden" name="id_cliente" value="<?php echo $cliente->getIdCliente(); ?>">
 
         <div class="form-group">
             <label for="nome" class="col-sm-2 control-label">Nome</label>
