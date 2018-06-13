@@ -101,7 +101,6 @@ CREATE TABLE IF NOT EXISTS `projetointegrador`.`festa` (
   `horario` VARCHAR(10) NOT NULL,
   `numero_convidados` VARCHAR(1000) NULL DEFAULT NULL,
   `id_cliente` INT(11) NOT NULL,
-  `decoracao_iddecoracao` INT(11) NOT NULL,
   `id_tp_festa` INT(11) NOT NULL,
   `id_decoracao` INT(11) NOT NULL,
   PRIMARY KEY (`id_festa`),

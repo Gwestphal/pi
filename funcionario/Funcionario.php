@@ -2,7 +2,8 @@
 
 include_once '../Conexao.php';
 
-class Funcionario{
+class Funcionario
+{
 
     protected $idfuncionarios;
     protected $nome;
@@ -12,9 +13,25 @@ class Funcionario{
     protected $celular;
     protected $endereco;
     protected $email;
-    protected $experiencia;
     protected $sexo;
     protected $uf;
+    protected $id_especialidade;
+
+    /**
+     * @return mixed
+     */
+    public function getIdEspecialidade()
+    {
+        return $this->id_especialidade;
+    }
+
+    /**
+     * @param mixed $id_especialidade
+     */
+    public function setIdEspecialidade($id_especialidade)
+    {
+        $this->id_especialidade = $id_especialidade;
+    }
 
     /**
      * @return mixed
@@ -147,22 +164,6 @@ class Funcionario{
     /**
      * @return mixed
      */
-    public function getExperiencia()
-    {
-        return $this->experiencia;
-    }
-
-    /**
-     * @param mixed $experiencia
-     */
-    public function setExperiencia($experiencia)
-    {
-        $this->experiencia = $experiencia;
-    }
-
-    /**
-     * @return mixed
-     */
     public function getSexo()
     {
         return $this->sexo;
@@ -193,14 +194,15 @@ class Funcionario{
     }
 
 
-
-    public function recuperarDados(){
+    public function recuperarDados()
+    {
         $conexao = new Conexao();
         $sql = "select * from funcionarios";
         return $conexao->recuperarDados($sql);
     }
 
-    public function inserir($dados){
+    public function inserir($dados)
+    {
 
         $nome = $dados['nome'];
         $cpf = $dados['cpf'];
@@ -209,28 +211,49 @@ class Funcionario{
         $celular = $dados['celular'];
         $endereco = $dados['endereco'];
         $email = $dados['email'];
-        $experiencia = $dados['experiencia'];
         $sexo = $dados['sexo'];
         $uf = $dados['uf'];
+        $id_especialidade = $dados['id_especialidade'];
 
         $conexao = new Conexao();
 
-        $sql = "insert into funcionarios (nome, cpf, rg, telefone, celular, endereco, email, experiencia, sexo, uf) values
-                ('$nome','$cpf','$rg','$telefone','$celular','$endereco','$email','$experiencia','$sexo','$uf');";
+        $sql = "insert into funcionarios (nome, cpf, rg, telefone, celular, endereco, email, sexo, uf, id_especialidade) values
+                ('$nome','$cpf','$rg','$telefone','$celular','$endereco','$email', '$sexo','$uf', '$id_especialidade');";
 
-        /*echo $sql; die; MOSTRAR O SQL*/
         return $conexao->executar($sql);
     }
 
-    public function excluir($idfuncionarios){
+    public function excluir($idfuncionarios)
+    {
 
         $conexao = new Conexao();
 
         $sql = "delete from funcionarios where idfuncionarios = $idfuncionarios;";
 
-        /*echo $sql; die; MOSTRAR O SQL*/
+        echo $sql; die;
         return $conexao->executar($sql);
     }
 
+    public function carregarPorId($idfuncionarios)
+    {
+        $conexao = new Conexao();
+
+        $sql = "select * from funcionarios where idfuncionarios = '$idfuncionarios'";
+
+        $dados = $conexao->recuperarDados($sql);
+
+        $this->idfuncionarios = $dados['$idfuncionarios'];
+        $this->nome = $dados['$nome'];
+        $this->cpf = $dados['$cpf'];
+        $this->rg = $dados['$rg'];
+        $this->telefone = $dados['$telefone'];
+        $this->celular = $dados['$celular'];
+        $this->endereco = $dados['$endereco'];
+        $this->email = $dados['$email'];
+        $this->sexo = $dados['$sexo'];
+        $this->uf = $dados['$uf'];
+        $this->id_especialidade = $dados['$id_especialidade'];
+
+    }
 
 }

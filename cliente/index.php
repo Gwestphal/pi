@@ -4,6 +4,11 @@ include_once '../cliente/Cliente.php';
 $cliente = new Cliente();
 $arClientes = $cliente->recuperarDados();
 
+if (!empty($_GET['id_cliente'])) {
+    $cliente->carregarPorId($_GET['id_cliente']);
+}
+
+
 include_once '../cabecalho.php';
 ?>
 

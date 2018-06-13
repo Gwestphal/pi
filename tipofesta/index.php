@@ -4,12 +4,16 @@ include_once '../tipofesta/Tipofesta.php';
 $tipofesta = new Tipofesta();
 $arTipofesta = $tipofesta->recuperarDados();
 
+if (!empty($_GET['id_tp_festa'])) {
+    $tipofesta->carregarPorId($_GET['id_tp_festa']);
+}
+
 include_once '../cabecalho.php';
 ?>
 
     <h1 class="text-center">Qual será o tema para sua festa?</h1>
 
-    <a class= "btn btn-info" href=formulario.php>Nova Festa</a>
+    <a class="btn btn-info" href=formulario.php>Nova Festa</a>
 
     <table class="table table-bordered table-hover table-striped table-condensed">
         <tr>
@@ -28,7 +32,7 @@ include_once '../cabecalho.php';
                 <td>{$tipofesta['nome']}</td>
             </tr>
             ";
-        }?>
+        } ?>
     </table>
 
 <?php

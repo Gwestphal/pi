@@ -19,12 +19,12 @@ include_once '../cabecalho.php';
 
 <div class="container">
     <form class="form-horizontal" action="processamento.php?acao=salvar" method="post">
-        <input type="hidden" name="id_tp_festa" value="<?php echo $tipofesta->getIdTpFesta(); ?>">
+        <input type="hidden" name="id_tp_festa" value="<?= $tipofesta->getIdTpFesta(); ?>">
 
         <div class="form-group">
             <label for="nome" class="col-sm-2 control-label">Tema</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="nome" name="nome" value="<?php echo $tipofesta->getNome(); ?>">
+                <input type="text" class="form-control" id="nome" name="nome" value="<?= $tipofesta->getNome(); ?>">
             </div>
         </div>
         <div class="form-group">

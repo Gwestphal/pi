@@ -4,7 +4,7 @@ include_once 'Funcionario.php';
 $funcionario = new Funcionario();
 
 
-switch ($_GET['acao']){
+switch ($_GET['acao']) {
     case 'salvar';
         $funcionario->inserir($_POST);
         break;
